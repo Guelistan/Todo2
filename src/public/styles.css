@@ -1,0 +1,123 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgba(13, 187, 13, 0);
+}
+
+h1 {
+    text-align: center;
+    background-color: rgba(150, 64, 71, 0.356);
+    box-shadow: #71f704;
+}
+
+#todoInput {
+    width: 80%;
+    padding: 10px;
+    margin: 10px auto;
+    display: block;
+    background-color: rgba(132, 165, 125, 0.356);
+}
+
+button {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 20px;
+    background-color: rgba(200, 147, 207, 0.356);
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    background-color: rgba(177, 206, 139, 0.356);
+    border-color: black;
+    border-radius: 25px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);	
+    padding-bottom: 12px;
+    margin: 10px auto;
+    width: 80%;
+    padding-right: 12px;
+    padding-left: 12px;
+    padding-block: 12px;
+    padding-inline: 12px;
+}
+
+li {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 25px;
+}
+
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1,
+h2,
+h3 {
+    text-align: center;
+}
+
+#todoApp {
+    margin-bottom: 20px;
+}
+
+#todoInput {
+    padding: 5px;
+    width: 300px;
+}
+
+button {
+    padding: 5px 10px;
+    margin-left: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.todo-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: gray;
+}
+
+#historyContainer,
+#hiddenHistory {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#historyContainer li,
+#hiddenHistory li {
+    margin-bottom: 5px;
+    padding: 5px;
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}

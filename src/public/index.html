@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Todo-Liste</title>
+    <style>
+        .todo-item { margin: 10px; padding: 10px; border: 1px solid #ccc; }
+        .todo-text { margin-right: 10px; }
+        .todo-image { max-width: 100px; max-height: 100px; margin-top: 10px; }
+        .completed { text-decoration: line-through; }
+    </style>
+</head>
+<body>
+    <input type="text" id="todoInput" placeholder="Neue Aufgabe">
+    <input type="file" id="imageInput" accept="image/*">
+    <button onclick="addTodo()">Hinzufügen</button>
+    <ul id="todoList"></ul>
+    <div id="historyContainer"></div>
+    <ul id="hiddenHistory" style="display:none;"></ul>
+    <script src="todo.js"></script>
+</body>
+</html>
