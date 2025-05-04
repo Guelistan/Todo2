@@ -1,151 +1,62 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: rgba(13, 187, 13, 0);
-}
+  body {
+      background-color: rgba(0, 0, 255, 0.377);
+      color: white;
+      font-family: Arial, sans-serif;
+  }
 
-h1 {
-    text-align: center;
-    background-color: rgba(150, 64, 71, 0.356);
-    box-shadow: #71f704;
-}
+  .todo-item {
+      margin: 10px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      display: inline-block;
+      vertical-align: top;
+      width: 30%;
+      box-sizing: border-box;
+  }
 
-#todoInput {
-    width: 80%;
-    padding: 10px;
-    margin: 10px auto;
-    display: block;
-    background-color: rgba(132, 165, 125, 0.356);
-}
+  .todo-text {
+      margin-right: 10px;
+  }
 
-button {
-    display: block;
-    margin: 10px auto;
-    padding: 10px 20px;
-    background-color: rgba(200, 147, 207, 0.356);
-}
+  .todo-image {
+      max-width: 100px;
+      max-height: 100px;
+      margin-top: 10px;
+  }
 
-ul {
-    list-style-type: none;
-    padding: 0;
-    background-color: rgba(177, 206, 139, 0.356);
-    border-color: black;
-    border-radius: 25px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);	
-    padding-bottom: 12px;
-    margin: 10px auto;
-    width: 80%;
-    padding-right: 12px;
-    padding-left: 12px;
-    padding-block: 12px;
-    padding-inline: 12px;
-}
+  .completed {
+      text-decoration: line-through;
+  }
 
-li {
-    border: 1px solid #ccc;
-    padding: 10px;
-    margin: 10px 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-radius: 25px;
-}
+  #camera {
+      display: none;
+  }
 
+  #cropper-container {
+      display: none;
+  }
 
+  button {
+      background-color: rgba(0, 128, 0, 0.63);
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      cursor: pointer;
+      box-shadow: 2px 2px 5px black;
+  }
 
+  button:hover {
+      opacity: 0.9;
+  }
 
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+  #todoList {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row-reverse;
+      padding: 0;
+      list-style: none;
+  }
 
-h1,
-h2,
-h3 {
-    text-align: center;
-}
-
-#todoApp {
-    margin-bottom: 20px;
-}
-
-#todoInput {
-    padding: 5px;
-    width: 300px;
-}
-
-button {
-    padding: 5px 10px;
-    margin-left: 10px;
-    border: none;
-    border-radius: 5px;
-    background-color: #007bff;
-    color: white;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #0056b3;
-}
-
-.todo-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 10px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-.completed {
-    text-decoration: line-through;
-    color: gray;
-}
-
-#historyContainer,
-#hiddenHistory {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-#historyContainer li,
-#hiddenHistory li {
-    margin-bottom: 5px;
-    padding: 5px;
-    background-color: #f0f0f0;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-}
-
-.todo-item {
-    margin: 10px;
-    padding: 10px;
-    border: 1px solid #ccc;
-}
-
-.todo-text {
-    margin-right: 10px;
-}
-
-.todo-image {
-    max-width: 100px;
-    max-height: 100px;
-    margin-top: 10px;
-}
-
-.completed {
-    text-decoration: line-through;
-}
-
-#camera {
-    display: none;
-}
-
-#cropper-container {
-    display: none;
-}
+  #todoList li {
+      margin: 10px;
+  }
