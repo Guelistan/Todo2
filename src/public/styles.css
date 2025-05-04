@@ -121,3 +121,31 @@ button:hover {
     border: 1px solid #ddd;
     border-radius: 5px;
 }
+
+.todo-item {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.todo-text {
+    margin-right: 10px;
+}
+
+.todo-image {
+    max-width: 100px;
+    max-height: 100px;
+    margin-top: 10px;
+}
+
+.completed {
+    text-decoration: line-through;
+}
+
+#camera {
+    display: none;
+}
+
+#cropper-container {
+    display: none;
+}
