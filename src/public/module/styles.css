@@ -1,7 +1,26 @@
   body {
-      background-color: rgba(0, 0, 255, 0.377);
+      background-color: rgba(50, 17, 126, 0.37);
       color: white;
       font-family: Arial, sans-serif;
+  }
+
+
+  #todoList {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row-reverse;
+      /* Neueste oben links */
+      justify-content: flex-start;
+      /* Elemente linksbündig */
+      padding: 0;
+      list-style: none;
+  }
+
+  #todoList li {
+      margin: 10px;
+      flex: 1 1 calc(33.33% - 20px);
+      /* Drei Elemente pro Zeile */
+      box-sizing: border-box;
   }
 
   .todo-item {
@@ -37,7 +56,7 @@
   }
 
   button {
-      background-color: rgba(0, 128, 0, 0.63);
+      background-color: rgba(6, 215, 243, 0.452);
       color: white;
       border: none;
       padding: 10px 15px;
@@ -47,16 +66,4 @@
 
   button:hover {
       opacity: 0.9;
-  }
-
-  #todoList {
-      display: flex;
-      flex-wrap: wrap;
-      flex-direction: row-reverse;
-      padding: 0;
-      list-style: none;
-  }
-
-  #todoList li {
-      margin: 10px;
   }

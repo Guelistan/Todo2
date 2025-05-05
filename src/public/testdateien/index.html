@@ -2,21 +2,65 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo-Liste</title>
     <style>
-        .todo-item { margin: 10px; padding: 10px; border: 1px solid #ccc; }
-        .todo-text { margin-right: 10px; }
-        .todo-image { max-width: 100px; max-height: 100px; margin-top: 10px; }
-        .completed { text-decoration: line-through; }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container {
+            padding: 20px;
+            max-width: 600px;
+            margin: auto;
+        }
+        .todo-item {
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            display: flex;
+            flex-direction: column;
+        }
+        .todo-text {
+            margin-right: 10px;
+        }
+        .todo-image {
+            max-width: 100%;
+            max-height: 100px;
+            margin-top: 10px;
+        }
+        .completed {
+            text-decoration: line-through;
+        }
+        #todoInput, #imageInput, button {
+            width: 100%;
+            margin: 5px 0;
+            padding: 10px;
+            font-size: 16px;
+        }
+        @media (min-width: 600px) {
+            #todoInput, #imageInput, button {
+                width: auto;
+                margin-right: 10px;
+            }
+            .todo-item {
+                flex-direction: row;
+                align-items: center;
+            }
+        }
     </style>
 </head>
 <body>
-    <input type="text" id="todoInput" placeholder="Neue Aufgabe">
-    <input type="file" id="imageInput" accept="image/*">
-    <button onclick="addTodo()">Hinzufügen</button>
-    <ul id="todoList"></ul>
-    <div id="historyContainer"></div>
-    <ul id="hiddenHistory" style="display:none;"></ul>
-    <script src="todo.js"></script>
+    <div class="container">
+        <input type="text" id="todoInput" placeholder="Neue Aufgabe">
+        <input type="file" id="imageInput" accept="image/*">
+        <button onclick="addTodo()">Hinzufügen</button>
+        <ul id="todoList"></ul>
+        <div id="historyContainer"></div>
+        <ul id="hiddenHistory" style="display:none;"></ul>
+    </div>
+    <script src="todoFunctions.s"></script>
 </body>
 </html>

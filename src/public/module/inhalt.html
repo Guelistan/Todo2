@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo-Liste</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        input, button {
+            width: 90%;
+            max-width: 400px;
+            margin: 10px 0;
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        ul {
+            width: 90%;
+            max-width: 400px;
+            list-style-type: none;
+            padding: 0;
+        }
+
+        #camera, #cropper-container {
+            width: 100%;
+            max-width: 400px;
+            margin: 10px 0;
+        }
+
+        video, canvas, img {
+            width: 100%;
+            height: auto;
+        }
+
+        @media (min-width: 768px) {
+            body {
+                max-width: 600px;
+                margin: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" id="todoInput" placeholder="Neue Aufgabe">
+    <input type="file" id="imageInput" accept="image/*">
+    <button id="openCameraButton">Kamera öffnen</button>
+    <button id="addTodoButton">Hinzufügen</button>
+
+    <button id="saveTodoButton">Speichern</button>
+    <button id="loadTodoButton">Laden</button>
+    <ul id="todoList"></ul>
+    <button onclick="toggleCompletedTasks()">Erledigte Aufgaben anzeigen/verstecken</button>
+    <div id="historyContainer" style="display:none;"></div>
+    <ul id="hiddenHistory" style="display:none;"></ul>
+
+    <div id="camera" style="display: none;">
+        <video id="video" autoplay></video>
+        <button onclick="takePicture()">Bild aufnehmen</button>
+        <canvas id="canvas" style="display: none;"></canvas>
+    </div>
+
+    <div id="cropper-container">
+        <img id="cropper-image">
+        <button onclick="cropImage()">Bild zuschneiden</button>
+        <button onclick="takePicture()">Bild aufnehmen</button>
+        <button onclick="saveCroppedImage()">Bild speichern</button>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.js"></script>
+    <script>
+        function toggleCompletedTasks() {
+            const historyContainer = document.getElementById('historyContainer');
+            if (historyContainer.style.display === 'none') {
+                historyContainer.style.display = 'block';
+            } else {
+                historyContainer.style.display = 'none';
+            }
+        }
+    </script>
+    <script type="module" src="todo.js"></script>
+    <script type="module" src="cameraFunctions.js"></script>
+    <script type="module" src="cropperFunctions.js"></script>
+    <script type="module" src="historyFunctions.js"></script>  
+    <script type="module" src="utils.js"></script>
+                                      
+  </body>
+
+</html>
